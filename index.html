@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="팀 프로젝트 진행 현황 대시보드 - 4개 조의 출석률, 진도, 결과 완성도 시각화">
+    <title>팀 프로젝트 진행 현황 대시보드</title>
+
+    <!-- Favicon (Emoji as Icon) -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Jua&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>팀 프로젝트 진행 현황</h1>
+            <p>각 조별 학생들의 출석률, 진도, 결과 완성도를 한눈에 확인하세요.</p>
+        </header>
+
+        <!-- Main Dashboard Content -->
+        <main class="dashboard-content">
+
+            <!-- Team 1 -->
+            <section class="team-card" id="team-1">
+                <div class="team-header">
+                    <h2>1조</h2>
+                    <span class="status-badge">진행중</span>
+                </div>
+                <div class="metrics-container">
+                    <div class="metric-item">
+                        <label>출석률</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="85"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>진도율</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="60"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>결과 완성도</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="40"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team 2 -->
+            <section class="team-card" id="team-2">
+                <div class="team-header">
+                    <h2>2조</h2>
+                    <span class="status-badge">진행중</span>
+                </div>
+                <div class="metrics-container">
+                    <div class="metric-item">
+                        <label>출석률</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="90"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>진도율</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="75"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>결과 완성도</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="50"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team 3 -->
+            <section class="team-card" id="team-3">
+                <div class="team-header">
+                    <h2>3조</h2>
+                    <span class="status-badge warning">지연</span>
+                </div>
+                <div class="metrics-container">
+                    <div class="metric-item">
+                        <label>출석률</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="70"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>진도율</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="45"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>결과 완성도</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="30"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team 4 -->
+            <section class="team-card" id="team-4">
+                <div class="team-header">
+                    <h2>4조</h2>
+                    <span class="status-badge success">완료 임박</span>
+                </div>
+                <div class="metrics-container">
+                    <div class="metric-item">
+                        <label>출석률</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="95"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>진도율</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="90"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                    <div class="metric-item">
+                        <label>결과 완성도</label>
+                        <div class="progress-bar-container">
+                            <div class="progress-fill" style="width: 0%" data-value="85"></div>
+                        </div>
+                        <span class="metric-value">0%</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Team Project Dashboard. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

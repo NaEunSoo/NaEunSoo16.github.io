@@ -1,0 +1,279 @@
+:root {
+    /* Student/Diary Aesthetic Palette */
+    --primary-color: #7c3aed;
+    --text-main: #2d3748;
+    --text-muted: #4a5568;
+
+    /* Post-it / Highlighter Colors */
+    --color-1: #ffb7b2;
+    /* Pastel Red */
+    --color-2: #bfdbfe;
+    /* Pastel Blue */
+    --color-3: #fef3c7;
+    /* Pastel Yellow */
+    --color-4: #bbf7d0;
+    /* Pastel Green */
+
+    --bg-pattern: #f0f4f8;
+    --card-bg: #ffffff;
+    --border-style: 2px solid #2d3748;
+    /* Hand-drawn style border */
+
+    /* Fonts */
+    --font-heading: 'Jua', sans-serif;
+    --font-body: 'Gamja Flower', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.2rem;
+    background-color: #fffdf9;
+    background-image:
+        linear-gradient(#e5e7eb 1px, transparent 1px),
+        linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+    background-size: 20px 20px;
+    /* Grid paper effect */
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding: 2rem;
+    background: #fff;
+    border: var(--border-style);
+    border-radius: 15px;
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Tape effect decoration */
+.dashboard-header::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    background-image: repeating-linear-gradient(45deg,
+            transparent,
+            transparent 10px,
+            rgba(255, 255, 255, 0.7) 10px,
+            rgba(255, 255, 255, 0.7) 20px);
+    background-color: #f7d794;
+    /* Masking tape color */
+    opacity: 0.7;
+    z-index: 10;
+}
+
+.dashboard-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+
+.dashboard-header p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #718096;
+}
+
+/* Main Content Grid */
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Team Cards - Polaroid / Note Style */
+.team-card {
+    background: var(--card-bg);
+    border: var(--border-style);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0px rgba(45, 55, 72, 0.15);
+    /* Solid shadow */
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+.team-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0px rgba(45, 55, 72, 0.2);
+}
+
+/* Colored Top Strip for better identification */
+.team-card::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Individual Team Colors */
+#team-1 {
+    background-color: #fff5f5;
+    border-color: #fc8181;
+}
+
+/* Red tint */
+#team-1 .team-header h2 {
+    color: #c53030;
+}
+
+#team-1 .progress-fill {
+    background: #fc8181;
+}
+
+#team-2 {
+    background-color: #ebf8ff;
+    border-color: #63b3ed;
+}
+
+/* Blue tint */
+#team-2 .team-header h2 {
+    color: #2b6cb0;
+}
+
+#team-2 .progress-fill {
+    background: #63b3ed;
+}
+
+#team-3 {
+    background-color: #fffaf0;
+    border-color: #f6ad55;
+}
+
+/* Orange tint */
+#team-3 .team-header h2 {
+    color: #c05621;
+}
+
+#team-3 .progress-fill {
+    background: #f6ad55;
+}
+
+#team-4 {
+    background-color: #f0fff4;
+    border-color: #68d391;
+}
+
+/* Green tint */
+#team-4 .team-header h2 {
+    color: #2f855a;
+}
+
+#team-4 .progress-fill {
+    background: #68d391;
+}
+
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 0.8rem;
+}
+
+.team-header h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+}
+
+/* Badges - Hand-drawn sticker look */
+.status-badge {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    background: #fff;
+    border: 2px solid currentColor;
+    transform: rotate(-3deg);
+}
+
+/* Metrics */
+.metrics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.metric-item label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+
+/* Progress Bars - Sketchy/Hand-drawn Style */
+.progress-bar-container {
+    height: 16px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 2px solid #2d3748;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.progress-fill {
+    height: 100%;
+    border-right: 2px solid #2d3748;
+    transition: width 1s ease-in-out;
+    position: relative;
+    /* Striped pattern for texture */
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent) !important;
+    background-size: 10px 10px;
+}
+
+.metric-value {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    float: right;
+    margin-top: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1rem;
+    opacity: 0.8;
+}
